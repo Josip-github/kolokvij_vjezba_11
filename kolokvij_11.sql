@@ -104,8 +104,9 @@ update muskarac set novcica = 15.70;
 #U tablici punica obrišite sve zapise čija je vrijednost kolone drugiputa 8. travnja 2019.
 delete from punica where drugiputa = '2019-04-08';
 
-
-
+#Izlistajte haljina iz tablice svekrva uz uvjet da vrijednost kolone carape sadrže slova ana.
+select haljina
+from svekrva s where s.carape like '&ana&';
 
 
 
