@@ -108,6 +108,21 @@ delete from punica where drugiputa = '2019-04-08';
 select haljina
 from svekrva s where s.carape like '&ana&';
 
+/*Prikažite drugiputa iz tablice mladic, haljina iz tablice punica te
+prstena iz tablice djevojka uz uvjet da su vrijednosti kolone carape iz
+tablice svekrva počinju slovom a te da su vrijednosti kolone kuna iz
+tablice punac različite od 21. Podatke posložite po prstena iz tablice
+djevojka silazno.*/
+
+#mladic,punica,djevojka, svekrva, punac
+select m.drugiputa , p2.haljina , d.prstena 
+from mladic m inner join punac_mladic pm on m.sifra = pm.mladic 
+inner join punac p on p.sifra = pm.punac 
+inner join svekrva s on s.punac = p.sifra 
+inner join djevojka d on d.svekrva = s.sifra 
+inner join punica p2 on p2.djevojka = d.sifra 
+where s.carape like 'a%' and p.kuna != 21.00;
+
 
 
 
