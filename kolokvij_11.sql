@@ -126,7 +126,7 @@ order by d.prstena desc;
 
 #Prikažite kolone kuna i vesta iz tablice punac čiji se primarni ključ ne nalaze u tablici punac_mladic.
 select p.kuna , p.vesta 
-from punac p inner join punac_mladic pm on pm.punac = p.sifra 
+from punac p left join punac_mladic pm on pm.punac = p.sifra 
 where pm.punac is null;
 
 
