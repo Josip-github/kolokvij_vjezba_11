@@ -121,7 +121,8 @@ inner join punac p on p.sifra = pm.punac
 inner join svekrva s on s.punac = p.sifra 
 inner join djevojka d on d.svekrva = s.sifra 
 inner join punica p2 on p2.djevojka = d.sifra 
-where s.carape like 'a%' and p.kuna != 21.00;
+where s.carape like 'a%' and p.kuna != 21.00
+order by d.prstena desc;
 
 #Prikažite kolone kuna i vesta iz tablice punac čiji se primarni ključ ne nalaze u tablici punac_mladic.
 select p.kuna , p.vesta 
