@@ -101,6 +101,8 @@ values('adidas',0,'neka bezz',0),('nike',0,'polo',1),('puma',1,'crvena',1);
 #U tablici muskarac postavite svim zapisima kolonu novcica na vrijednost 15,70.
 update muskarac set novcica = 15.70;
 
+#U tablici punica obrišite sve zapise čija je vrijednost kolone drugiputa 8. travnja 2019.
+delete from punica where drugiputa = '2019-04-08';
 
 
 
