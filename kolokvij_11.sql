@@ -98,6 +98,8 @@ values(12,'pokemon',1),(14,'kratke ljetne',2),(20,'debele zimske',3);
 insert into djevojka(kratkamajica,ekstrovertno,majica,introvertno)
 values('adidas',0,'neka bezz',0),('nike',0,'polo',1),('puma',1,'crvena',1);
 
+#U tablici muskarac postavite svim zapisima kolonu novcica na vrijednost 15,70.
+update muskarac set novcica = 15.70;
 
 
 
