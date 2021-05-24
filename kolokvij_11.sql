@@ -82,6 +82,22 @@ alter table svekrva add foreign key (punac) references punac(sifra);
 alter table punac_mladic add foreign key (punac) references punac(sifra);
 alter table punac_mladic add foreign key (mladic) references mladic(sifra);
 
+#U tablice djevojka, svekrva i punac_mladic unesite po 3 retka.
+insert into punac(kuna,vesta)
+values(77.66,'Adidas'),(88.99,'S kapuljačom'),(100.02,'za po kući');
+
+insert into mladic(ogrlica,drugiputa,hlace)
+values(13,'2020-02-02','traper'),(14,'2021-01-10','poderane'),(15,'2018-04-05','od odijela');
+
+insert into punac_mladic(punac,mladic)
+values(1,1),(2,2),(3,3);
+
+insert into svekrva(narukvica,carape,punac)
+values(12,'pokemon',1),(14,'kratke ljetne',2),(20,'debele zimske',3);
+
+insert into djevojka(kratkamajica,ekstrovertno,majica,introvertno)
+values('adidas',0,'neka bezz',0),('nike',0,'polo',1),('puma',1,'crvena',1);
+
 
 
 
